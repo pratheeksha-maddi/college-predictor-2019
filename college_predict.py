@@ -52,13 +52,13 @@ def predict():
     print(type(e))
     if e>60:
         c='Invalid input'
-        t1.delete("1.0", END)           #t1=tab1 consists of disease predicted by this alg   #previous value is deleted
+        t1.delete("1.0", END)           #t1=tab1 consists of college predicted by this alg   #previous value is deleted
         t1.insert(END, c)
         exit()
         
     elif p>100:
         c='Invalid input'
-        t1.delete("1.0", END)           #t1=tab1 consists of disease predicted by this alg   #previous value is deleted
+        t1.delete("1.0", END)           #t1=tab1 consists of college predicted by this alg   #previous value is deleted
         t1.insert(END, c)
         exit()
       
@@ -88,14 +88,14 @@ def predict():
     from sklearn import metrics
     cnf_matrix = metrics.confusion_matrix(y_test, y_pred)
     print(cnf_matrix)
-    t1.delete("1.0", END)           #t1=tab1 consists of disease predicted by this alg   #previous value is deleted
+    t1.delete("1.0", END)           #t1=tab1 consists of college predicted by this alg   #previous value is deleted
     t1.insert(END, c)
 
 
 root = Tk()
 root.configure(background='khaki2')
 #root.geometry("900*600")
-t1 = Text(root, height=1, width=20,bg="cyan",fg="black")  #textbox to display disease predicted
+t1 = Text(root, height=1, width=20,bg="cyan",fg="black")  #textbox to display college predicted
 t1.grid(row=9, column=4, padx=10)
     # Heading
 w2 = Label(root, justify=CENTER, text="COLLEGE PREDICTOR", fg="black",bg="steel blue")
@@ -133,7 +133,7 @@ dst = Button(root, text="Predict", command=predict,bg="green",fg="yellow")    #c
 dst.grid(row=10, column=3,padx=10,pady=15)
 
     #textfileds
-#t1 = Text(root, height=1, width=40,bg="orange",fg="black")  #textbox to display disease predicted
+#t1 = Text(root, height=1, width=40,bg="orange",fg="black")  #textbox to display college predicted
 #t1.grid(row=15, column=1, padx=10)
 
 #t2 = Text(root, height=1, width=40,bg="orange",fg="black")
